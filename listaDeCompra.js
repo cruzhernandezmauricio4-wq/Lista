@@ -10,3 +10,15 @@ const agregarProducto = (producto) => {
     console.log(`${producto} ya está en la lista.`);
   }
 };
+
+// Función para eliminar un producto
+const eliminarProducto = (producto) => {
+  const indice = listaDeCompras.indexOf(producto);
+
+  if (indice !== -1) {
+    listaDeCompras.splice(indice, 1);
+    console.log(`${producto} eliminado de la lista.`);
+  } else {
+    console.log(`${producto} no se encontró en la lista.`);
+  }
+};
