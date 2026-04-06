@@ -22,3 +22,26 @@ const eliminarProducto = (producto) => {
     console.log(`${producto} no se encontró en la lista.`);
   }
 };
+
+// Función para mostrar la lista de compras
+const mostrarLista = () => {
+  if (listaDeCompras.length === 0) {
+    console.log("La lista de compras está vacía.");
+  } else {
+    console.log("Lista de Compras:");
+    listaDeCompras.forEach((producto, index) => {
+      console.log(`${index + 1}. ${producto}`);
+    });
+  }
+};
+
+// Ejemplo de uso
+agregarProducto("Leche");
+agregarProducto("Pan");
+agregarProducto("Huevos");
+agregarProducto("Pan"); // Duplicado
+
+mostrarLista();
+
+eliminarProducto("Pan");
+mostrarLista();
