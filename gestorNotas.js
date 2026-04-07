@@ -22,6 +22,7 @@ function agregarNota(titulo, contenido) {
 
   // PISTA: Ahora debes sobrescribir el archivo con las notas actualizadas.
   // COMPLETAR: Usa fs.writeFileSync para guardar las notas.
+  fs.writeFileSync(filePath, JSON.stringify(notas, null, 2));
   console.log('Nota agregada con éxito.');
 }
 
