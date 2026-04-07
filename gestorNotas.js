@@ -33,6 +33,15 @@ function listarNotas() {
   if (fs.existsSync(filePath)) {
     // PISTA: Debes leer y parsear el contenido del archivo.
     // COMPLETAR: Usa fs.readFileSync para leer y JSON.parse para convertir el contenido.
+    
+    const data = fs.readFileSync(filePath, 'utf8');
+    const notas = JSON.parse(data);
+    
+    console.log('Notas guardadas:');
+    notas.forEach((nota, index) => {
+    console.log(`${index + 1}. ${nota.titulo}: ${nota.contenido}`);
+
+
   } else {
     console.log('No hay notas guardadas.');
   }
