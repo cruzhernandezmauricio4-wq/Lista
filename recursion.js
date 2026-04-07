@@ -34,3 +34,10 @@ giftToFind = "Camión";
 console.log(findGift(gifts, giftToFind));
 // Salida esperada:
 // "Camión no está en la lista."
+
+// tiene que coincidir exactamente en la palabra si no no funciona 
+giftToFind = "rompecabezas";
+console.log(findGift(gifts, giftToFind))
+
+giftToFind = "Rompecabezas";
+console.log(findGift(gifts, giftToFind))
