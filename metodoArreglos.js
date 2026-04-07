@@ -20,3 +20,14 @@ console.log("Productos con precio menor a $100:");
 productosBaratos2.forEach(producto => {
   console.log(producto.nombre);
 });
+
+// 2. Usar sort() para ordenar los productos alfabéticamente por nombre
+const productosOrdenados = [...productos].sort((a, b) =>
+  a.nombre.localeCompare(b.nombre)
+);
+console.log("Productos ordenados alfabéticamente:");
+console.log(productosOrdenados);
+//2.1 da solo los nombres 
+productosOrdenados.forEach(producto => {
+  console.log(producto.nombre);
+});
