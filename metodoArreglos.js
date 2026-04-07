@@ -37,3 +37,13 @@ productosOrdenados.forEach(producto => {
 const nombresProductos = productosOrdenados.map(producto => producto.nombre);
 console.log("Nombres de los productos:");
 console.log(nombresProductos);
+
+//opcional 
+
+// reduce(): calcular el total de los productos baratos
+const total = productosBaratos.reduce((suma, producto) => suma + producto.precio, 0);
+console.log("Total de comprar todos los productos económicos:", total);
+
+// some(): verificar si existe algún producto de Ropa
+const hayRopa = productos.some(producto => producto.categoria === "Ropa");
+console.log("¿Hay productos de ropa?:", hayRopa);
