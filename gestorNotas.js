@@ -40,7 +40,7 @@ function listarNotas() {
     console.log('Notas guardadas:');
     notas.forEach((nota, index) => {
     console.log(`${index + 1}. ${nota.titulo}: ${nota.contenido}`);
-
+    });
 
   } else {
     console.log('No hay notas guardadas.');
@@ -80,9 +80,13 @@ function eliminarNota(titulo) {
 
 // Ejecución de ejemplo
 agregarNota('Compras', 'Comprar leche y pan.');
+agregarNota('To do', 'Hacer actividades.');
+agregarNota('Medico', 'Ir al medico lunes 06/2365 a las 13:00');
+agregarNota('Compras', 'Comprar leche y pan.');
 listarNotas();
 eliminarNota('Compras');
-
+//Agrega notas duplicadas, si hay dos con el mismos nombre las elimina.
+/*
 // ### Pistas para Resolver el Proyecto ###
 // Formato del archivo `notas.json`:
 [
@@ -99,4 +103,4 @@ const notas = JSON.parse(data);
 fs.writeFileSync(filePath, JSON.stringify(notas, null, 2));
 
 // 3. Filtrar notas para eliminar:
-const notasRestantes = notas.filter((nota) => nota.titulo !== titulo);
+const notasRestantes = notas.filter((nota) => nota.titulo !== titulo);*/
