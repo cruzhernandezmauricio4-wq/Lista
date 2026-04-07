@@ -31,3 +31,9 @@ console.log(productosOrdenados);
 productosOrdenados.forEach(producto => {
   console.log(producto.nombre);
 });
+
+
+// 3. Usar map() para generar un arreglo solo con los nombres
+const nombresProductos = productosOrdenados.map(producto => producto.nombre);
+console.log("Nombres de los productos:");
+console.log(nombresProductos);
