@@ -1,20 +1,27 @@
-const  invitados  =  [ "Ana" ,  "Carlos" ,  "Cecilia" ,  "Daniel" ,  "Diana" ,  "Eduardo" ] ;
+const invitados = ["Ana", "Carlos", "Cecilia", "Daniel", "Diana", "Eduardo"];
 
-function  encontrarPareja ( arr )  {
-    let  inicio  =  0 ;
-    let  siguiente  =  1 ;
+function encontrarPareja(arr) {
+  let inicio = 0;
+  let siguiente = 1;
 
-    mientras  ( siguiente  <  arr . longitud )  {
-        // TODO: Compara las iniciales de los nombres en los punteros
-        // Si coincide, devuelve el par
-        // ...
+  while (siguiente < arr.length) {
+    // Obtener la primera letra de cada nombre
+    const inicialInicio = arr[inicio][0];
+    const inicialSiguiente = arr[siguiente][0];
 
-        // TODO: Avanza los punteros si no coinciden
-        // ...
+    // Comparar iniciales
+    if (inicialInicio === inicialSiguiente) {
+      return [arr[inicio], arr[siguiente]];
     }
 
-    devolver  nulo ;  // Si no se encuentra ningún par
+    // Avanzar los punteros
+    inicio++;
+    siguiente++;
+  }
+
+  // Si no se encuentra ningún par
+  return null;
 }
 
-consola . log ( encontrarPareja ( invitados ) ) ;
-// Resultado: ["Carlos", "Cecilia"]
+console.log(encontrarPareja(invitados));
+// Resultado esperado: ["Carlos", "Cecilia"]
